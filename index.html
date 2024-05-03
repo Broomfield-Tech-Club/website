@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light only">
+    <title>Broomfield Tech Club</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Kode+Mono:wght@400..700&family=Lekton:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--
+     ______________________________________________________
+    |                                                      |
+    |  ____                             __ _      _     _  |
+    | |  _ \                           / _(_)    | |   | | |
+    | | |_) |_ __ ___   ___  _ __ ___ | |_ _  ___| | __| | |
+    | |  _ <| '__/ _ \ / _ \| '_ ` _ \|  _| |/ _ \ |/ _` | |
+    | | |_) | | | (_) | (_) | | | | | | | | |  __/ | (_| | |
+    | |____/|_|  \___/ \___/|_| |_| |_|_| |_|\___|_|\__,_| |
+    |______________________________________________________|                                                 
+    |                                                      |
+    |_[user@broomfield:~$]_________________________________| 
+    -->
+    <header>
+        <img src="logo.png" alt="Broomfield Tech Club Logo" id="logo">
+        <h1>Broomfield Tech Club</h1>
+    </header>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Broomfield Tech Club is a vibrant community of doctors dedicated to enhancing their digital skills to address the most pressing healthcare challenges. Inspired by the pioneering spirit of the <a href="https://en.wikipedia.org/wiki/Skunkworks_project">skunkworks</a> philosophy, we embrace bold and innovative approaches to problem-solving. We welcome all doctors who share our passion for progress and innovation to join us.</p>
+    </section>
+    <section id="sessions">
+        <h2>Sessions</h2>
+        <p>We hold regular sessions on various topics, from basic digital skills to advanced programming. Join our mailing list for more details.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="mailing-list" action="https://script.google.com/macros/s/AKfycbzvqjctEMEY99lTkZmHCR7qUhkI1Rfunrhq4elf6byU5KzUp-Ti6S00FOaVaS0gVFYVyA/exec" method="POST">
+            <input type="email" name="email" placeholder="Your email address" required>
+            <button type="submit">Join Mailing List</button>
+        </form>
+        <p>Email us at <a href="mailto:contact@broomfieldtech.club?subject=Website query">contact@broomfieldtech.club</a>.</p>
+    </section>
+    <footer>
+        <p>© 2022-24 Broomfield Tech Club</p>
+    </footer>
+    <script>
+        document.getElementById('mailing-list').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.text())
+            .then(data => alert(data))
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

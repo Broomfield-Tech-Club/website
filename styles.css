@@ -1,0 +1,81 @@
+body {
+    font-family: 'Kode Mono', 'Lekton', 'Courier New', Courier, monospace;
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-size: x-large;
+    background-color: #11001C;
+    color: #FFFFFF;
+    margin-left: 21%;
+    margin-right: 21%;
+    padding: 0;
+    font-size: 16px;
+}
+
+#logo {
+    max-width: 150px; 
+}
+
+header, nav, section, footer {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #0f0;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a {
+    color: #9d7bb0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #532a6a;
+    text-decoration: underline;
+}
+
+section {
+    margin-top: 20px;
+}
+
+#mailing-list input[type="email"] {
+    font-family: 'Kode Mono', 'Lekton', 'Courier New', Courier, monospace;
+    padding: 8px;
+    font-size: 14px;
+}
+
+#mailing-list button {
+    font-family: 'Kode Mono', 'Lekton', 'Courier New', Courier, monospace;
+    padding: 10px 15px;
+    background-color: #32004F;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#mailing-list button:hover {
+    background-color: #220135;
+}
+
+footer {
+    margin-top: 40px;
+    color: #666;
+}
