@@ -1,9 +1,12 @@
+html {
+    background-color: #11001C;
+}
+
 body {
-    font-family: 'Kode Mono', 'Lekton', 'Courier New', Courier, monospace;
+    font-family: 'Kode Mono', monospace;
     font-style: normal;
     font-optical-sizing: auto;
     font-size: x-large;
-    background-color: #11001C;
     color: #FFFFFF;
     margin-left: 15%;
     margin-right: 15%;
@@ -13,10 +16,6 @@ body {
 
 #logo {
     max-width: 150px; 
-}
-
-#discord {
-    max-width: 90px;
 }
 
 header, nav, section, footer {
@@ -60,13 +59,13 @@ section {
 }
 
 #mailing-list input[type="email"] {
-    font-family: 'Kode Mono', 'Lekton', 'Courier New', Courier, monospace;
+    font-family: 'Kode Mono', monospace;
     padding: 8px;
     font-size: 14px;
 }
 
 #mailing-list button {
-    font-family: 'Kode Mono', 'Lekton', 'Courier New', Courier, monospace;
+    font-family: 'Kode Mono', monospace;
     padding: 10px 15px;
     background-color: #32004F;
     color: #FFFFFF;
@@ -77,6 +76,14 @@ section {
 
 #mailing-list button:hover {
     background-color: #220135;
+}
+
+h2 {
+    font-family: 'Kode Mono', sans-serif;
+}
+
+#about, #sessions, #contact {
+    font-family: 'Inter', sans-serif;
 }
 
 footer {
