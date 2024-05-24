@@ -42,24 +42,37 @@
         <p><a href="mailto:contact@broomfieldtech.club?subject=Website query">contact@broomfieldtech.club</a></p>
         <form id="mailing-list" action="https://script.google.com/macros/s/AKfycbzvqjctEMEY99lTkZmHCR7qUhkI1Rfunrhq4elf6byU5KzUp-Ti6S00FOaVaS0gVFYVyA/exec" method="POST">
             <input type="email" name="email" placeholder="Your email address" required>
-            <button type="submit">Join Mailing List</button>
+            <button type="submit">Join Mailing List</button> <span id="loading" style="display:none;">&#x1F501;</span>
         </form>
     </section>
     <footer>
         <p>© 2024 Broomfield Tech Club</p>
     </footer>
     <script>
-        document.getElementById('mailing-list').addEventListener('submit', function(event) {
-            event.preventDefault();
-            var formData = new FormData(this);
-            fetch(this.action, {
-                method: 'POST',
-                body: formData,
-            })
-            .then(response => response.text())
-            .then(data => alert(data))
-            .catch(error => console.error('Error:', error));
+    document.getElementById('mailing-list').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var form = this;
+        var button = form.querySelector('button[type="submit"]');
+        button.disabled = true;
+        button.textContent = 'Submitting...'; // Change button text
+        var formData = new FormData(form);
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.text())
+        .then(data => {
+            alert(data);
+            button.textContent = 'Submit'; // Reset button text
+            button.disabled = false; // Re-enable the button
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Failed to submit. Please try again.');
+            button.textContent = 'Submit'; // Reset button text
+            button.disabled = false; // Re-enable the button
         });
+    });
     </script>
 </body>
 </html>
